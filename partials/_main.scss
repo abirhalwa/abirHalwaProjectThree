@@ -1,0 +1,117 @@
+// to style the section
+section {
+  min-height: 55vh;
+  background-image: url("./assets/clouds.png");
+  background-size: contain;
+  animation: move 20s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // to style the content div
+  .content {
+    border-radius: 30px;
+    border: 3px solid $secondaryColor;
+    background-color: $lightColor;
+    padding: 1vh 1%;
+    .contentChild {
+      @include flex;
+      min-height: 30vh;
+      margin: 5vh 2%;
+      text-align: center;
+      & > *:not(:last-child) {
+        margin-bottom: 5vh;
+      }
+    }
+    //to style the timer
+    .timer {
+      display: flex;
+      justify-content: space-evenly;
+      width: 200px;
+    }
+    .home h1 {
+      font-family: $secondaryFont;
+      line-height: 4rem;
+      font-size: 2.7rem;
+      font-weight: 700;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      li {
+        margin-right: 2%;
+        margin-bottom: 1vh;
+      }
+    }
+    //to hide some elements from the page
+    .hidden {
+      display: none;
+    }
+    // to style the typing paragraph
+    .typingTextContainer {
+      @include typingFont;
+      line-height: 2;
+      // to underline the cuurent letter
+      .underline {
+        border-bottom: 4px solid $accentColor1;
+        padding-bottom: 5px;
+      }
+      // to style the correct typed character
+      .correct {
+        color: $correctTextColor;
+        background-color: $correctShadingColor;
+      }
+      // to style the wrong typed character
+      .wrong {
+        color: $wrongTextColor;
+        background-color: $wrongShadingColor;
+      }
+    }
+    //to style the form
+    form {
+      @include flex;
+      width: 100%;
+      textarea {
+        width: 100%;
+        height: 20vh;
+        margin-bottom: 5vh;
+        @include typingFont;
+        padding: 1vh 2%;
+        border: 1px solid $primaryColor;
+        &:focus {
+          box-shadow: 2px 2px #888888;
+        }
+      }
+    }
+  }
+  /* to style the instructions div */
+  .instructionsDiv {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    div {
+      @include flex;
+      position: fixed;
+      padding: 2%;
+      background: $lightColor;
+      width: 670px; /* width of instructions div */
+      height: 415px; /* height of instructions div */
+      left: calc(50vw - 335px); /* 335 is half of (670), centers x axis*/
+      top: calc(50vh - 207px); /* 207 is half of (415), centers y axis*/
+      ol {
+        margin: 2% 0;
+        li {
+          margin-bottom: 2%;
+        }
+      }
+      button {
+        align-self: center;
+      }
+    }
+  }
+}

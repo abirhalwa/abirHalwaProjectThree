@@ -1,0 +1,45 @@
+// to style the header
+header {
+  min-height: 20vh;
+  padding: 2vh 2%;
+  color: white;
+  //to style the navigation bar
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    i {
+      //to style the hamburger icon in the header
+      visibility: hidden;
+      font-size: 4rem;
+      background-color: $accentColor1;
+      cursor: pointer;
+      text-align: right;
+    }
+    label {
+      //to style the toogle label of the hamburger icon
+      position: fixed;
+      right: 5%;
+      z-index: 10;
+    }
+    input[type="checkbox"] {
+      /*hide the input, we don't need to see it */
+      display: none;
+    }
+    ul {
+      display: flex;
+      li {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        a {
+          color: inherit;
+          &:hover,
+          &:focus {
+            color: $secondaryColor;
+          }
+        }
+      }
+    }
+  }
+}

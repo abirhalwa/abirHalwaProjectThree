@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head begins here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- link to Font Awesome -->
+    <script src="https://kit.fontawesome.com/9afc9229b5.js" crossorigin="anonymous"></script>
+    <!-- link to favicon image -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+    <!-- link to style sheet file -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Typing Rabbit | Home</title>
+</head>
+<!-- head ends here -->
+
+<!-- body starts here -->
+<body>
+
+    <!-- header starts here -->
+    <header>
+        <nav class="wrapper">
+            <a class="logo" href="./index.html"> <img src="./assets/logo.png" alt="typing rabbit logo"></a>
+            <!-- hamburger menu icon -->
+            <label for="toggle">
+                <i aria-hidden="true" class="fa fa-bars"></i>
+                <span class="sr-only">main menu</span>
+            </label>
+            <input type="checkbox" id="toggle" name="toggle" autocomplete="off" />
+            <!-- end of hamburger menu icon -->
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a id="showInstructions" href="#">Instructions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ends here -->
+
+    <!-- main starts here -->
+    <main>
+        <section>
+            <!-- content div starts here -->
+            <div class="content wrapper">
+                <!-- home div starts here -->
+                <div id="homeDiv" class="contentChild home">
+                    <h1 id="welcome">
+                    </h1>
+                    <button id="getStarted">Get Started</button>
+                </div>
+                <!-- home div ends here -->
+
+                <!-- level div starts here -->
+                <div id="levelDiv" class="hidden">
+                    <h1>Please select your level?</h1>
+                    <ul>
+                        <li><button class="level" id="basicButton">Basic</button></li>
+                        <li><button class="level" id="intermediateButton">Intermediate</button></li>
+                        <li><button class="level" id="advancedButton">Advanced</button></li>
+                    </ul>
+                </div>
+                <!-- level div ends here -->
+
+                <!-- typing div starts here -->
+                <div id="typingDiv" class="hidden">
+                    <audio id="typewriter" class="hidden">
+                        <source src="sounds/typewriter.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio id="error" class="hidden">
+                        <source src="./sounds/error.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <h1>Start Typing</h1>
+                    <p id="typingTextContainer" class="typingTextContainer">
+                    </p>
+                    <div class="hidden timer" id="timer">
+                        <p>Time: </p> <time></time>
+                    </div>
+                    <form class="hidden">
+                        <label for="typingArea" class="visuallyHidden">Type your text here</label>
+                        <textarea id="typingArea" placeholder="type here!"></textarea>
+                        <button>Submit</button>
+                    </form>
+                </div>
+                <!-- typing div ends here -->
+
+                <!-- result div starts here -->
+                <div id="resultDiv" class="hidden">
+                    <h1>Your Result</h1>
+                    <p id="accuracy"></p>
+                    <p id="speed"></p>
+                    <div class="timer">
+                        <p>Duration: </p><time></time>
+                    </div>
+                    <a href="#" id="showLevel">Go back to levels</a>
+                </div>
+                <!-- result div ends here -->
+            </div>
+            <!-- content div ends here -->
+
+            <!-- instructions div starts here -->
+            <div class="instructionsDiv">
+                <div>
+                    <h1>How to Use TypingRabbit</h1>
+                    <ol>
+                        <li>You need first to click on Get Started button</li>
+                        <li>Then, you have to select your level</li>
+                        <li>After selecting your level, you will be able to see the typing text.</li>
+                        <li>Once you press a key in the keyboard, the timer will start </li>
+                        <li>Be careful when you type, once you make a mistake, you can't undo it :) </li>
+                    </ol>
+                    <button id="close">close</button>
+                </div>
+            </div>
+            <!-- instructions div ends here -->
+        </section>
+    </main>
+    <!-- main ends here -->
+    <!-- footer starts here -->
+    <footer></footer>
+    <!-- footer ends here -->
+    <!-- link to jquery -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    <!-- link to an external javascript file used to add the typewriter animation-->
+    <script src="./scripts/core.js"></script>
+    <!-- link to the Javascript file  -->
+    <script src="./scripts/script.js"></script>
+</body>
+<!-- body ends here -->
+
+</html>

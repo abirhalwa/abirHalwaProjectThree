@@ -1,0 +1,87 @@
+// General styles go here
+/*  to set the base font-size */
+html {
+  font-size: 62.5%;
+}
+
+/* to style the body tag */
+body {
+  font-family: $primaryFont;
+  font-size: 2rem;
+  color: $primaryColor;
+  line-height: 2rem;
+  background-color: $accentColor1;
+}
+
+/* to style the wrapper classes */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+/* to reset the margin and padding for some elements */
+h1 ul,
+img,
+body,
+p,
+textarea,
+form,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+/* to remove the list style from any list */
+ul {
+  list-style: none;
+}
+
+/* to style all the links */
+a {
+  text-decoration: none;
+  color: $secondaryColor;
+  font: inherit;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* to style all the links when hover or focus  */
+a:hover,
+a:focus {
+  color: $accentColor1;
+}
+
+/* to style all the images */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* to style all the buttons */
+button {
+  background-color: $secondaryColor;
+  width: 200px;
+  height: 50px;
+  font: inherit;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: $lightColor;
+}
+
+/* to style the buttons when hover or focus */
+button:hover,
+button:focus {
+  background-color: $accentColor2;
+  color: $secondaryColor;
+  box-shadow: 0 0 50px $accentColor2;
+}
+
+/* to style heading 1 */
+h1 {
+  color: $secondaryColor;
+  line-height: 3.5rem;
+}

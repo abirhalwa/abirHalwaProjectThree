@@ -1,0 +1,75 @@
+// amedia query to change the width of the wrapper class
+@media (max-width: 850px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+
+//a media query to change the size of the instructions div
+@media (max-width: 670px) {
+  section .instructionsDiv div {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+// media query to change the size of some elements
+@media (max-width: 580px) {
+  button {
+    width: 150px;
+  }
+  h1 {
+    font-size: calc(3vw + 1.6rem);
+  }
+  section .content {
+    .home h1 {
+      font-size: calc(2vw + 1.6rem);
+    }
+    .typingTextContainer,
+    form textarea {
+      font-size: calc(1.5vw + 1.6rem);
+      line-height: calc(1.5vw + 2rem);
+    }
+  }
+  header nav {
+    .logo {
+      margin-right: 40px;
+    }
+    i {
+      visibility: visible; // to show the hamburger icon
+    }
+    input[type="checkbox"]:checked ~ ul {
+      right: 0; /*when the checkbox is checked, show the menu*/
+    }
+    ul {
+      background: $primaryColor;
+      position: fixed;
+      z-index: 10;
+      width: 55%;
+      right: -55%; /* to hide the ul from the screen */
+      top: 10%;
+      transition: all 0.3s; /*animation */
+      flex-direction: column;
+      li {
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        a {
+          border-bottom: 1px solid $accentColor1;
+          width: 100%;
+          padding: 15px;
+          color: $accentColor1;
+          text-align: center;
+          transition: all 0.3s; /* transition on the background color*/
+          &:hover,
+          &a:focus {
+            color: $lightColor;
+          }
+        }
+      }
+    }
+  }
+}

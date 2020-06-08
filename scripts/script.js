@@ -43,7 +43,7 @@ $(function () {
         remainingText = html = '';
         displayDivAndHideDiv($levelDiv, $typingDiv)
         if ($(this).attr('id') == 'basicButton') {
-            typingText = 'practice makes perfect. everytime you repeat this lesson, your speed will increase.';
+            typingText = 'my name is Abir and I am a front end developer';
         }
         else if ($(this).attr('id') == 'intermediateButton') {
             typingText = 'Dogs were the first animals ever to be domesticated. They are usually playful, friendly, and listen to humans.';
